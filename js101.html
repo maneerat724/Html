@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Maneerat Khuabpimai</h1>
+    <h1>66162110557-6</h1>
+    
+     
+     <form >
+        <label for="">weight</label>
+        <input type="text" id = "weight" > <br>
+
+        <label for="">height</label>
+        <input type="number" id = "height">
+
+        <button type ="button" onclick="cal()">Calulate BMI</button>
+
+     </form>
+     <hr>
+     <h2>Resault</h2>
+     <p id = "bmi"></p>
+     <p id = "bmi_note"></p>
+    
+    <script >
+        function cal() {
+        const weight = document.getElementById("weight").value
+        const height = document.getElementById("height").value
+        const height_m = height /100
+        let BMI = weight /(height_m * height_m) 
+        BMI = BMI.toFixed(2)
+      
+
+        if (BMI < 18.50){
+            BMI_note = "ผอม"
+        }else if (BMI => 18.50 && BMI <= 22.90){
+           
+            BMI_note = "ปกติ"
+        }
+        else if (BMI => 23 && BMI <= 24.90){
+            BMI_note = "ท้วม"
+        }
+        else if (BMI => 25 && BMI <= 29.90){
+            BMI_note = "อ้วน"
+        }
+       
+        document.getElementById("bmi").innerHTML = BMI
+        document.getElementById("bmi_note").innerHTML = BMI_note
+            
+
+        }
+        // function check(){
+
+        //     console.log(document.getElementById("width").value)
+        // }
+        // .value คือ การ get ค่าออกมา
+
+       
+
+    //     const friends = [{"name" : "Nicha" , "age" : 21 },
+    //         {"name" : "Rose" , "age" : 23 } ,
+    //         {"name" : "linly" , "age" : 18 } ,
+    //         {"name" : "Malee" , "age" : 32 } 
+    //     ]
+    //     friends.map(f => (
+    //         document.write(f.name  + "is" + f.age + "<br/>")
+    // ))
+        // .map วิ่งเข้าไปในarray
+
+
+        // let a,b,d ;
+        // a = 1 ; 
+        // b = "2" ;
+        // c = a + b ;
+        // document.writeln("  Result is  "  + c)
+        // console.log("Hello");
+        // console.log(1+2+3);
+        // วิธีทำให้จาวารู้จัก doc..
+        
+        // window.alert('Hello');   
+        // ทำให้จอป็อปอัพ
+
+        //document.write("1234567")
+        // document.getElementById("intro").innerHTML = "Hello   Worlld" ; 
+        // document.getElementById("intro").innerText = "1234" ;
+        // document.getElementById("intro").textContent = "56 78" ;
+        
+    </script>
+
+
+
+</body>
+</html>

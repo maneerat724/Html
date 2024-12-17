@@ -1,0 +1,19 @@
+p{
+    color: black;
+}
+#center {
+    text-align:center;
+    color: chartreuse;
+
+}
+.red_right {
+    text-align: right;
+    color: blueviolet;
+}
+.nav {
+    list-style:none;
+    float: left;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
